@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyFlow AI — Study Smarter. Learn Faster. Achieve More.</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="StudyFlow AI is an AI-powered student productivity and learning platform designed to help students organize study schedules, summarize notes, generate quizzes, and achieve academic goals.">
+  <meta name="keywords" content="StudyFlow AI, AI study planner, student productivity, smart notes, AI quiz generator, exam preparation, focus timer">
+  <meta name="author" content="Somil Jain">
+  <meta name="theme-color" content="#FAF9F6">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="StudyFlow AI — Study Smarter. Learn Faster. Achieve More.">
+  <meta property="og:description" content="AI-powered student productivity and learning platform. Experience personalized study planning, automated note summaries, and smart quizzes.">
+  <meta property="og:image" content="assets/logo.svg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  
+  <!-- Warm & Academic Google Fonts: DM Sans (Headings) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+
+  <!-- Top Academic Demonstration Banner -->
+  <div class="demo-banner" role="complementary" aria-label="Project Demonstration Notice">
+    <div class="banner-inner container">
+      <span class="badge-pill">Academic Prototype</span>
+      <p class="banner-text">
+        <strong>StudyFlow AI</strong> is a conceptual learning platform created by <strong>Somil Jain</strong> for an internship submission. Non-commercial showcase.
+      </p>
+      <button class="banner-close" id="bannerCloseBtn" aria-label="Dismiss banner">&times;</button>
+    </div>
+  </div>
+
+  <!-- Sticky Navigation Header -->
+  <header class="site-header" id="mainHeader">
+    <div class="nav-container container">
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="StudyFlow AI Home">
+        <div class="logo-icon-wrapper">
+          <img src="assets/logo.svg" alt="StudyFlow AI Logo" class="brand-img" width="34" height="34">
+        </div>
+        <span class="brand-text">StudyFlow<span class="brand-dot-ai">.ai</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#ai-tools" class="nav-link">AI Tools</a></li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Theme Toggle & CTA) -->
+      <div class="nav-actions">
+        <!-- Theme Switcher -->
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <span class="theme-icon light-icon" aria-hidden="true">☀️</span>
+          <span class="theme-icon dark-icon" aria-hidden="true">🌙</span>
+        </button>
+
+        <a href="#ai-tools" class="btn btn-primary nav-cta" id="navGetStartedBtn">
+          <span>Get Started</span>
+          <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="hamburger-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <div class="mobile-drawer-content">
+        <ul class="mobile-nav-links">
+          <li><a href="#home" class="mobile-nav-link">Home</a></li>
+          <li><a href="#about" class="mobile-nav-link">About</a></li>
+          <li><a href="#features" class="mobile-nav-link">Features</a></li>
+          <li><a href="#ai-tools" class="mobile-nav-link">AI Tools</a></li>
+          <li><a href="#how-it-works" class="mobile-nav-link">How It Works</a></li>
+          <li><a href="#pricing" class="mobile-nav-link">Pricing</a></li>
+          <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+          <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+        <div class="mobile-drawer-footer">
+          <a href="#ai-tools" class="btn btn-primary btn-block mobile-cta" id="mobileCtaBtn">
+            Get Started Free
+          </a>
+          <p class="mobile-creator-credit">Project by Somil Jain</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- ==================== 1. HERO SECTION ==================== -->
+    <section class="hero-section" id="home">
+      <!-- Subtle Decorative Background Elements (No Neon Orbs) -->
+      <div class="hero-bg-wash" aria-hidden="true"></div>
+
+      <div class="container hero-container">
+        <div class="hero-header-content fade-in-up">
+          <div class="hero-pill">
+            <span class="sparkle-icon" aria-hidden="true">🌱</span>
+            <span>Thoughtful Student Learning Platform</span>
+            <span class="pill-divider" aria-hidden="true">•</span>
+            <span class="pill-highlight">Built for Students</span>
+          </div>
+
+          <!-- Hero Heading (Exact required text & styling: charcoal + green accent) -->
+          <h1 class="hero-title">
+            <span class="title-dark">Study Smarter.</span> <br class="br-desktop">
+            <span class="title-accent">Learn Faster.</span> 
+            <span class="title-dark">Achieve More.</span>
+          </h1>
+
+          <!-- Supporting Text (Exact required text) -->
+          <p class="hero-subtitle">
+            StudyFlow AI helps students organize their studies, create personalized learning plans, summarize notes, and stay focused with the power of artificial intelligence.
+          </p>
+
+          <!-- Two Hero CTA Buttons -->
+          <div class="hero-cta-group">
+            <a href="#ai-tools" class="btn btn-primary btn-lg" id="heroGetStartedBtn">
+              <span>Get Started Free</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+            <a href="#features" class="btn btn-secondary btn-lg" id="heroExploreBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <span>Explore Features</span>
+            </a>
+          </div>
+
+          <!-- Micro Social Proof -->
+          <div class="hero-social-proof">
+            <div class="avatar-stack" aria-hidden="true">
+              <img src="assets/student-aarav.svg" alt="Student avatar" class="avatar-thumb">
+              <img src="assets/student-sophia.svg" alt="Student avatar" class="avatar-thumb">
+              <img src="assets/student-marcus.svg" alt="Student avatar" class="avatar-thumb">
+              <span class="avatar-count">+10k</span>
+            </div>
+            <div class="proof-text">
+              <div class="stars" aria-label="5 stars rating">★★★★★</div>
+              <p>Trusted by <strong>10,000+ students</strong> • 4.8/5 Student Rating</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual: Clean, Approachable Student Dashboard UI -->
+        <div class="hero-visual-wrapper fade-in-up delay-1">
+          <div class="dashboard-window" id="heroDashboardMock">
+            
+            <!-- Window Titlebar -->
+            <div class="window-header">
+              <div class="window-dots" aria-hidden="true">
+                <span class="dot dot-1"></span>
+                <span class="dot dot-2"></span>
+                <span class="dot dot-3"></span>
+              </div>
+              <div class="window-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M14 9l3 3-3 3"/></svg>
+                <span>StudyFlow Workspace — Molecular Biology & Chemistry Prep</span>
+              </div>
+              <div class="window-badge">
+                <span class="live-pulse"></span>
+                <span>Active Plan</span>
+              </div>
+            </div>
+
+            <!-- Dashboard Content Frame -->
+            <div class="dashboard-body">
+              
+              <!-- Mini Sidebar -->
+              <aside class="dash-sidebar" aria-label="Dashboard preview sidebar">
+                <div class="user-mini-card">
+                  <div class="user-avatar-badge">AR</div>
+                  <div class="user-info">
+                    <span class="user-name">Alex Rivera</span>
+                    <span class="user-role">Biomedical Engineering</span>
+                  </div>
+                </div>
+
+                <div class="dash-menu-group">
+                  <span class="menu-label">STUDY MODULES</span>
+                  <div class="dash-menu-item active">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    <span>Smart Planner</span>
+                  </div>
+                  <div class="dash-menu-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    <span>Notes Summarizer</span>
+                  </div>
+                  <div class="dash-menu-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    <span>Active Recall Quiz</span>
+                  </div>
+                  <div class="dash-menu-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Focus Chamber</span>
+                  </div>
+                </div>
+
+                <div class="focus-mini-widget">
+                  <div class="focus-status">
+                    <span class="focus-title">Focus Mode</span>
+                    <span class="focus-timer" id="heroTimerDisplay">24:45</span>
+                  </div>
+                  <div class="focus-progress-bar">
+                    <div class="focus-progress-fill" style="width: 78%;"></div>
+                  </div>
+                  <button class="focus-toggle-btn" id="heroTimerBtn">Pause Session</button>
+                </div>
+              </aside>
+
+              <!-- Main Workspace Grid -->
+              <div class="dash-main">
+                
+                <!-- Top Status Bar -->
+                <div class="dash-status-strip">
+                  <div class="strip-left">
+                    <span class="greeting">Welcome back, Alex</span>
+                    <span class="sub-greeting">Your personalized study plan has 3 milestones ready today.</span>
+                  </div>
+                  <div class="strip-metrics">
+                    <div class="metric-pill warm">
+                      <span class="metric-icon">🌿</span>
+                      <span>14 Day Habit</span>
+                    </div>
+                    <div class="metric-pill green">
+                      <span class="metric-icon">✓</span>
+                      <span>92% Mastery</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Dashboard Interactive Cards Grid -->
+                <div class="dash-cards-grid">
+                  
+                  <!-- Today's Schedule Card -->
+                  <div class="dash-card schedule-card">
+                    <div class="card-top">
+                      <h3>Today's Study Schedule</h3>
+                      <span class="tag-status">Balanced Plan</span>
+                    </div>
+                    <ul class="task-checklist" id="heroTaskList">
+                      <li class="task-item completed">
+                        <input type="checkbox" id="task1" checked>
+                        <label for="task1">
+                          <span class="task-time">09:00 AM</span>
+                          <span class="task-name">Enzyme Kinetics & Inhibitors</span>
+                          <span class="task-tag bio">Biology</span>
+                        </label>
+                      </li>
+                      <li class="task-item">
+                        <input type="checkbox" id="task2">
+                        <label for="task2">
+                          <span class="task-time">11:30 AM</span>
+                          <span class="task-name">Organic Synthesis Mechanisms</span>
+                          <span class="task-tag chem">Chemistry</span>
+                        </label>
+                      </li>
+                      <li class="task-item">
+                        <input type="checkbox" id="task3">
+                        <label for="task3">
+                          <span class="task-time">02:15 PM</span>
+                          <span class="task-name">Practice Recall Flashcards</span>
+                          <span class="task-tag quiz">15 Qs</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- AI Note Synthesis Card -->
+                  <div class="dash-card summary-card">
+                    <div class="card-top">
+                      <h3>Concise Study Summary</h3>
+                      <span class="ai-spark-pill">Synthesized Notes</span>
+                    </div>
+                    <div class="summary-preview-box">
+                      <div class="doc-header">
+                        <span class="doc-badge">Source: Lecture_08_Neurotransmission.pdf (32 pages)</span>
+                      </div>
+                      <div class="summary-bullets">
+                        <div class="bullet-row">
+                          <span class="b-dot"></span>
+                          <p><strong>Action Potential:</strong> Na⁺ channels open rapidly, inducing depolarization from -70mV to +30mV.</p>
+                        </div>
+                        <div class="bullet-row">
+                          <span class="b-dot"></span>
+                          <p><strong>Refractory Period:</strong> Inactivation of Na⁺ gates enforces unidirectional propagation.</p>
+                        </div>
+                        <div class="bullet-row">
+                          <span class="b-dot"></span>
+                          <p><strong>Synaptic Cleft:</strong> Ca²⁺ influx triggers exocytosis of neurotransmitter vesicles.</p>
+                        </div>
+                      </div>
+                      <div class="ai-time-saved">
+                        <span>📖 Reading time condensed: <strong>48 min ➔ 3.2 min</strong></span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Live Recommendation Bar -->
+                <div class="ai-insight-bar">
+                  <div class="insight-icon">💡</div>
+                  <div class="insight-text">
+                    <strong>Study Recommendation:</strong> Quick review in <em>Organic Mechanisms</em> is suggested to solidify memory before tomorrow's lab.
+                  </div>
+                  <button class="btn btn-sm btn-outline" id="heroStartQuizBtn">Practice Now</button>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Subtle Educational Feature Badges -->
+          <div class="floating-badge badge-left" aria-hidden="true">
+            <span class="badge-icon">📚</span>
+            <div class="badge-text">
+              <strong>Smart Scheduling</strong>
+              <small>Calm pacing, no cramming</small>
+            </div>
+          </div>
+          <div class="floating-badge badge-right" aria-hidden="true">
+            <span class="badge-icon">🎯</span>
+            <div class="badge-text">
+              <strong>Exam Readiness</strong>
+              <small>Confidence Score: 94%</small>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 2. TRUST / INTRODUCTION SECTION ==================== -->
+    <section class="trust-section" id="trust">
+      <div class="container">
+        
+        <div class="section-intro text-center fade-in-up">
+          <span class="section-tag">Core Value</span>
+          <!-- Required Heading -->
+          <h2 class="section-title">Your Personal AI Study Assistant</h2>
+          <p class="section-subtitle">
+            Say goodbye to disorganized notes, midnight cramming, and burnout. StudyFlow AI acts as your intelligent 24/7 academic partner to streamline chaos into clear, achievable daily wins.
+          </p>
+        </div>
+
+        <!-- 4 Key Benefits (Exact required topics) -->
+        <div class="benefits-grid">
+          
+          <!-- Benefit 1 -->
+          <div class="benefit-card fade-in-up">
+            <div class="card-icon-box icon-green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Personalized Study Planning</h3>
+            <p class="benefit-desc">
+              Customized learning roadmaps mapped to your exact syllabus, exam dates, and daily available study hours.
+            </p>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="benefit-card fade-in-up delay-1">
+            <div class="card-icon-box icon-warm">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h3 class="benefit-title">AI-Powered Summaries</h3>
+            <p class="benefit-desc">
+              Transform thick textbook chapters, lecture slides, and lengthy research papers into concise, actionable key takeaways.
+            </p>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="benefit-card fade-in-up delay-2">
+            <div class="card-icon-box icon-green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="12 6 12 12 16 14"></polygon>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Smart Productivity Tools</h3>
+            <p class="benefit-desc">
+              Integrated Pomodoro timers, distraction-free focus modes, ambient study soundscapes, and smart task management.
+            </p>
+          </div>
+
+          <!-- Benefit 4 -->
+          <div class="benefit-card fade-in-up delay-3">
+            <div class="card-icon-box icon-warm">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Progress Tracking</h3>
+            <p class="benefit-desc">
+              Visual learning analytics, knowledge retention curves, and milestone trackers to keep you on schedule and exam-ready.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. ABOUT SECTION ==================== -->
+    <section class="about-section" id="about">
+      <div class="container">
+        
+        <div class="about-layout">
+          <!-- Text column -->
+          <div class="about-text-col fade-in-up">
+            <span class="section-tag">About StudyFlow AI</span>
+            <!-- Required Heading -->
+            <h2 class="section-title">Built for the Way Students Learn Today</h2>
+            <p class="about-lead">
+              Modern academic life is demanding. Between heavy reading lists, complex assignments, and tight deadlines, students often struggle not with intelligence, but with cognitive overload.
+            </p>
+            <p class="about-description">
+              <strong>StudyFlow AI combines productivity and AI-powered learning tools into one platform.</strong> We replace fragmented apps, messy folders, and chaotic schedules with an all-in-one ecosystem that understands your academic objectives and accelerates your comprehension.
+            </p>
+
+            <!-- Three Core Values (Exact required values) -->
+            <div class="values-list">
+              
+              <div class="value-item">
+                <div class="value-bullet">01</div>
+                <div class="value-content">
+                  <h4 class="value-name">Simplicity</h4>
+                  <p class="value-text">
+                    Zero unnecessary complexity. Clean workflows that allow students to paste their notes or syllabus and start making progress within seconds.
+                  </p>
+                </div>
+              </div>
+
+              <div class="value-item">
+                <div class="value-bullet">02</div>
+                <div class="value-content">
+                  <h4 class="value-name">Personalization</h4>
+                  <p class="value-text">
+                    Every student learns differently. Our intelligent algorithms adapt to your speed, subject weaknesses, and preferred revision cycles.
+                  </p>
+                </div>
+              </div>
+
+              <div class="value-item">
+                <div class="value-bullet">03</div>
+                <div class="value-content">
+                  <h4 class="value-name">Productivity</h4>
+                  <p class="value-text">
+                    Eliminate procrastination through structured focus intervals, automated task prioritization, and science-backed active recall.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Visual Column: Modern Academic Comparison Showcase -->
+          <div class="about-visual-col fade-in-up delay-1">
+            <div class="about-graphic-card">
+              <div class="graphic-top-row">
+                <span class="graphic-pill">The StudyFlow Advantage</span>
+                <span class="graphic-chip">Calm & Structured</span>
+              </div>
+              <div class="comparison-block">
+                <div class="comp-col old-way">
+                  <span class="comp-tag error">Traditional Studying</span>
+                  <ul class="comp-list">
+                    <li>✕ Disorganized paper notes</li>
+                    <li>✕ Late night panic cramming</li>
+                    <li>✕ Passive re-reading with low retention</li>
+                    <li>✕ Constant phone distractions</li>
+                  </ul>
+                </div>
+                <div class="comp-divider" aria-hidden="true">➔</div>
+                <div class="comp-col new-way">
+                  <span class="comp-tag success">With StudyFlow AI</span>
+                  <ul class="comp-list">
+                    <li>✓ 1-Click synthesized notes</li>
+                    <li>✓ AI-balanced daily schedules</li>
+                    <li>✓ Active recall & instant self-quizzes</li>
+                    <li>✓ Deep focus mode with timers</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="about-card-stat">
+                <div class="stat-mini-ring">
+                  <svg viewBox="0 0 36 36" class="circular-chart">
+                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="circle" stroke-dasharray="85, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <text x="18" y="20.35" class="percentage">85%</text>
+                  </svg>
+                </div>
+                <div class="stat-mini-info">
+                  <strong>Estimated Study Time Saved</strong>
+                  <p>Students save up to 8.5 hours weekly on manual note formatting and schedule juggling.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 4. FEATURES SECTION ==================== -->
+    <section class="features-section" id="features">
+      <div class="container">
+        
+        <div class="section-intro text-center fade-in-up">
+          <span class="section-tag">Feature Suite</span>
+          <!-- Required Heading -->
+          <h2 class="section-title">Everything You Need to Study Better</h2>
+          <p class="section-subtitle">
+            An integrated toolkit crafted specifically to remove friction from your academic journey and boost long-term retention.
+          </p>
+        </div>
+
+        <!-- At least 6 feature cards (Exact required features) -->
+        <div class="features-grid">
+          
+          <!-- Feature 1: AI Study Planner -->
+          <div class="feature-card fade-in-up" data-feature="planner">
+            <div class="feature-icon icon-green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3 class="feature-name">AI Study Planner</h3>
+            <p class="feature-desc">
+              Automatically organize study goals into a practical schedule. Input your exam dates and syllabus, and let the AI balance study blocks around your routine.
+            </p>
+            <a href="#ai-tools" class="feature-link" data-tool="planner">
+              <span>Learn More</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+
+          <!-- Feature 2: Smart Notes -->
+          <div class="feature-card fade-in-up delay-1" data-feature="notes">
+            <div class="feature-icon icon-warm">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-name">Smart Notes</h3>
+            <p class="feature-desc">
+              Convert long notes into concise summaries. Upload text, lecture slides, or PDFs and extract fundamental definitions, formulas, and flashpoints.
+            </p>
+            <a href="#ai-tools" class="feature-link" data-tool="summarizer">
+              <span>Learn More</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+
+          <!-- Feature 3: AI Quiz Generator -->
+          <div class="feature-card fade-in-up delay-2" data-feature="quiz">
+            <div class="feature-icon icon-green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            <h3 class="feature-name">AI Quiz Generator</h3>
+            <p class="feature-desc">
+              Generate practice questions from study material. Create multiple choice, flashcard decks, and conceptual test questions for high-yield active recall.
+            </p>
+            <a href="#ai-tools" class="feature-link" data-tool="quiz">
+              <span>Learn More</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+
+          <!-- Feature 4: Focus Mode -->
+          <div class="feature-card fade-in-up" data-feature="focus">
+            <div class="feature-icon icon-warm">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-name">Focus Mode</h3>
+            <p class="feature-desc">
+              Help students stay focused using distraction-free study sessions. Built-in Pomodoro intervals, ambient audio soundscapes, and digital pause alerts.
+            </p>
+            <a href="#ai-tools" class="feature-link" data-modal="focusModal">
+              <span>Learn More</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+
+          <!-- Feature 5: Progress Tracking -->
+          <div class="feature-card fade-in-up delay-1" data-feature="progress">
+            <div class="feature-icon icon-green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <h3 class="feature-name">Progress Tracking</h3>
+            <p class="feature-desc">
+              Track study goals and completed tasks. Monitor retention heatmaps, completion rates, study streaks, and exam readiness scores in real-time.
+            </p>
+            <a href="#ai-tools" class="feature-link" data-modal="progressModal">
+              <span>Learn More</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+
+          <!-- Feature 6: Personalized Recommendations -->
+          <div class="feature-card fade-in-up delay-2" data-feature="recommendations">
+            <div class="feature-icon icon-warm">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3 class="feature-name">Personalized Recommendations</h3>
+            <p class="feature-desc">
+              Suggest study activities based on student goals. The AI identifies weak topics from quiz responses and recommends targeted revision drills.
+            </p>
+            <a href="#ai-tools" class="feature-link" data-modal="recModal">
+              <span>Learn More</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 5. AI TOOLS SECTION ==================== -->
+    <section class="ai-tools-section" id="ai-tools">
+      <div class="container">
+        
+        <div class="section-intro text-center fade-in-up">
+          <span class="section-tag">Interactive Tools</span>
+          <!-- Required Heading -->
+          <h2 class="section-title">Powerful AI Tools in One Place</h2>
+          <p class="section-subtitle">
+            Experience the practical use of AI tools in student workflows. Click below to test simulated live demonstrations.
+          </p>
+        </div>
+
+        <!-- 3 Large Tool Cards (Exact required items) -->
+        <div class="tools-grid">
+          
+          <!-- Tool Card 1: AI Summarizer -->
+          <div class="tool-large-card fade-in-up" id="toolCardSummarizer">
+            <div class="tool-card-header">
+              <div class="tool-badge-row">
+                <span class="tool-tag tag-summarizer">AI Tool 01</span>
+                <span class="tool-status-dot">Interactive Demo</span>
+              </div>
+              <h3 class="tool-heading">AI Summarizer</h3>
+              <!-- Exact required text -->
+              <p class="tool-lead">"Turn lengthy study material into easy-to-understand summaries."</p>
+            </div>
+
+            <!-- Interactive Demo Preview for Tool 1 -->
+            <div class="tool-interactive-box">
+              <div class="tool-controls">
+                <span class="controls-label">Select Sample Topic:</span>
+                <div class="sample-pills">
+                  <button class="sample-pill active" data-sample="biology">Biology (DNA)</button>
+                  <button class="sample-pill" data-sample="history">History (WW2)</button>
+                  <button class="sample-pill" data-sample="cs">CS (Recursion)</button>
+                </div>
+              </div>
+              
+              <div class="input-preview-area">
+                <label for="summarizerInput" class="sr-only">Study notes to summarize</label>
+                <textarea id="summarizerInput" class="tool-textarea" rows="3" aria-label="Input notes for AI summarizer">Deoxyribonucleic acid (DNA) is a polymer composed of two polynucleotide chains that coil around each other to form a double helix. The polymer carries genetic instructions for the development, functioning, growth and reproduction of all known organisms. The two DNA strands are known as polynucleotides since they are composed of simpler monomeric units called nucleotides (adenine, cytosine, guanine, and thymine).</textarea>
+              </div>
+
+              <div class="tool-actions-row">
+                <button class="btn btn-primary btn-sm" id="runSummarizerBtn">
+                  <span>Summarize Notes</span>
+                </button>
+                <span class="ai-processing-hint" id="summarizerStatus">Ready to condense</span>
+              </div>
+
+              <!-- Output Box -->
+              <div class="summary-result-box" id="summarizerOutput">
+                <div class="res-badge">Key Study Takeaways:</div>
+                <ul class="res-list">
+                  <li><strong>Structure:</strong> Double-helix polymer composed of two coiled polynucleotide strands.</li>
+                  <li><strong>Core Function:</strong> Encodes genetic instructions for development, growth, and cellular reproduction.</li>
+                  <li><strong>Nucleotide Bases:</strong> Built from 4 fundamental bases: Adenine (A), Cytosine (C), Guanine (G), Thymine (T).</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tool-card-footer">
+              <button class="btn btn-outline btn-block tool-cta-btn" data-target="summarizer">Try AI Tools</button>
+            </div>
+          </div>
+
+          <!-- Tool Card 2: Quiz Generator -->
+          <div class="tool-large-card fade-in-up delay-1" id="toolCardQuiz">
+            <div class="tool-card-header">
+              <div class="tool-badge-row">
+                <span class="tool-tag tag-quiz">AI Tool 02</span>
+                <span class="tool-status-dot">Interactive Quiz</span>
+              </div>
+              <h3 class="tool-heading">Quiz Generator</h3>
+              <!-- Exact required text -->
+              <p class="tool-lead">"Create practice quizzes from your notes and topics."</p>
+            </div>
+
+            <!-- Interactive Demo Preview for Tool 2 -->
+            <div class="tool-interactive-box">
+              <div class="quiz-widget" id="demoQuizWidget">
+                <div class="quiz-question-header">
+                  <span class="question-number" id="quizProgText">Question 1 of 3</span>
+                  <span class="question-score" id="quizScoreText">Score: 0 / 3</span>
+                </div>
+                
+                <h4 class="quiz-question-title" id="quizQuestionTitle">
+                  Which nucleotide base pairs specifically with Adenine (A) in standard DNA?
+                </h4>
+
+                <div class="quiz-options-grid" id="quizOptionsContainer">
+                  <button class="quiz-opt-btn" data-index="0">A. Guanine (G)</button>
+                  <button class="quiz-opt-btn" data-index="1">B. Cytosine (C)</button>
+                  <button class="quiz-opt-btn" data-index="2" data-correct="true">C. Thymine (T)</button>
+                  <button class="quiz-opt-btn" data-index="3">D. Uracil (U)</button>
+                </div>
+
+                <div class="quiz-feedback-box" id="quizFeedbackBox" style="display: none;">
+                  <span class="feedback-indicator"></span>
+                  <p class="feedback-text" id="quizFeedbackText"></p>
+                </div>
+
+                <div class="quiz-nav-row">
+                  <button class="btn btn-secondary btn-sm" id="nextQuizQBtn" style="display: none;">Next Question ➔</button>
+                  <button class="btn btn-outline btn-sm" id="resetQuizBtn">Reset Quiz</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="tool-card-footer">
+              <button class="btn btn-outline btn-block tool-cta-btn" data-target="quiz">Try AI Tools</button>
+            </div>
+          </div>
+
+          <!-- Tool Card 3: Study Planner -->
+          <div class="tool-large-card fade-in-up delay-2" id="toolCardPlanner">
+            <div class="tool-card-header">
+              <div class="tool-badge-row">
+                <span class="tool-tag tag-planner">AI Tool 03</span>
+                <span class="tool-status-dot">Study Schedule</span>
+              </div>
+              <h3 class="tool-heading">Study Planner</h3>
+              <!-- Exact required text -->
+              <p class="tool-lead">"Build a personalized study schedule based on your goals."</p>
+            </div>
+
+            <!-- Interactive Demo Preview for Tool 3 -->
+            <div class="tool-interactive-box">
+              <div class="planner-form-mini">
+                <div class="mini-form-row">
+                  <div class="form-group-sm">
+                    <label for="plannerSubjectSelect">Target Exam:</label>
+                    <select id="plannerSubjectSelect" class="form-select-sm">
+                      <option value="Physics Finals">Physics Finals</option>
+                      <option value="Calculus II Midterm">Calculus II Midterm</option>
+                      <option value="World History Exam">World History Exam</option>
+                    </select>
+                  </div>
+                  <div class="form-group-sm">
+                    <label for="plannerHoursSelect">Daily Study Time:</label>
+                    <select id="plannerHoursSelect" class="form-select-sm">
+                      <option value="2">2 Hours / Day</option>
+                      <option value="3" selected>3 Hours / Day</option>
+                      <option value="4">4+ Hours / Day</option>
+                    </select>
+                  </div>
+                </div>
+
+                <button class="btn btn-primary btn-sm btn-block" id="generateScheduleBtn">
+                  <span>Generate 5-Day Plan</span>
+                </button>
+
+                <!-- Dynamic Schedule Plan Result -->
+                <div class="generated-schedule-list" id="generatedScheduleList">
+                  <div class="plan-day-item">
+                    <span class="day-badge">Day 1</span>
+                    <div class="day-details">
+                      <strong>Core Foundation & Lecture Recaps</strong>
+                      <small>2h Concept mapping + 1h Flashcards</small>
+                    </div>
+                  </div>
+                  <div class="plan-day-item">
+                    <span class="day-badge">Day 2</span>
+                    <div class="day-details">
+                      <strong>Deep Problem Sets & Formulas</strong>
+                      <small>2.5h Numerical practice + 30m review</small>
+                    </div>
+                  </div>
+                  <div class="plan-day-item">
+                    <span class="day-badge">Day 3</span>
+                    <div class="day-details">
+                      <strong>Targeted Weak Area Drills</strong>
+                      <small>Error analysis & self-testing</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tool-card-footer">
+              <button class="btn btn-outline btn-block tool-cta-btn" data-target="planner">Try AI Tools</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Global Try AI Tools CTA Banner -->
+        <div class="tools-cta-box text-center fade-in-up">
+          <div class="tools-cta-content">
+            <h3 class="tools-cta-title">Ready to test the full StudyFlow AI suite?</h3>
+            <p class="tools-cta-desc">Join thousands of students experiencing calm, accelerated learning without exam anxiety.</p>
+            <a href="#contact" class="btn btn-primary btn-lg" id="globalTryAiToolsBtn">Try AI Tools Free</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 6. HOW IT WORKS ==================== -->
+    <section class="how-it-works-section" id="how-it-works">
+      <div class="container">
+        
+        <div class="section-intro text-center fade-in-up">
+          <span class="section-tag">Process</span>
+          <h2 class="section-title">How It Works</h2>
+          <p class="section-subtitle">
+            A calm, 3-step loop designed to turn overwhelming academic workloads into confident, mastered results.
+          </p>
+        </div>
+
+        <!-- 3-Step Connected Cards Timeline (Exact required steps) -->
+        <div class="timeline-steps-grid">
+          
+          <!-- Step 1: Set Your Goal -->
+          <div class="step-card fade-in-up">
+            <div class="step-badge">Step 1</div>
+            <div class="step-icon-wrap icon-green">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+            </div>
+            <!-- Exact required step title -->
+            <h3 class="step-title">Set Your Goal</h3>
+            <!-- Exact required step description -->
+            <p class="step-desc">
+              Choose what you want to learn or achieve.
+            </p>
+            <p class="step-extra">
+              Input your upcoming exams, essay deadlines, or syllabus chapters along with your target grades.
+            </p>
+          </div>
+
+          <!-- Connecting Arrow / Line -->
+          <div class="timeline-connector" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+          </div>
+
+          <!-- Step 2: Let AI Plan -->
+          <div class="step-card fade-in-up delay-1">
+            <div class="step-badge">Step 2</div>
+            <div class="step-icon-wrap icon-warm">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+              </svg>
+            </div>
+            <!-- Exact required step title -->
+            <h3 class="step-title">Let AI Plan</h3>
+            <!-- Exact required step description -->
+            <p class="step-desc">
+              StudyFlow AI creates a personalized learning plan.
+            </p>
+            <p class="step-extra">
+              The algorithm breaks down complex subjects into bite-sized daily milestones, curated summaries, and revision slots.
+            </p>
+          </div>
+
+          <!-- Connecting Arrow / Line -->
+          <div class="timeline-connector" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+          </div>
+
+          <!-- Step 3: Learn & Track -->
+          <div class="step-card fade-in-up delay-2">
+            <div class="step-badge">Step 3</div>
+            <div class="step-icon-wrap icon-green">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <!-- Exact required step title -->
+            <h3 class="step-title">Learn & Track</h3>
+            <!-- Exact required step description -->
+            <p class="step-desc">
+              Study, complete tasks, and monitor your progress.
+            </p>
+            <p class="step-extra">
+              Engage with focus timers, take interactive quizzes, and watch your exam readiness indicator reach peak mastery.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 7. STATISTICS / IMPACT SECTION ==================== -->
+    <section class="stats-section" id="stats">
+      <div class="container">
+        
+        <div class="stats-banner-card fade-in-up">
+          <div class="stats-header text-center">
+            <span class="badge-pill">Project Showcase Indicators</span>
+            <h2 class="stats-section-title">Demonstrated Platform Performance</h2>
+            <p class="stats-section-subtitle">
+              Simulated platform impact metrics representing student study groups and prototype testing.
+            </p>
+          </div>
+
+          <!-- Fictional demonstration statistics (Exact required metrics) -->
+          <div class="stats-grid">
+            
+            <div class="stat-box">
+              <div class="stat-number" data-target="10000">10K+</div>
+              <div class="stat-label">Study Sessions</div>
+              <p class="stat-sub">Completed during platform beta</p>
+            </div>
+
+            <div class="stat-box">
+              <div class="stat-number" data-target="95">95%</div>
+              <div class="stat-label">Goal Completion</div>
+              <p class="stat-sub">Milestones achieved on time</p>
+            </div>
+
+            <div class="stat-box">
+              <div class="stat-number" data-target="4.8">4.8/5</div>
+              <div class="stat-label">Student Rating</div>
+              <p class="stat-sub">Across 850+ feedback responses</p>
+            </div>
+
+            <div class="stat-box">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">AI Assistance</div>
+              <p class="stat-sub">Instant study help anytime</p>
+            </div>
+
+          </div>
+
+          <!-- Mandatory Clear Demonstration Label -->
+          <div class="demo-stats-notice">
+            <span class="notice-icon">ℹ️</span>
+            <span><strong>Academic Demonstration Notice:</strong> The numbers above are simulated product metrics created for this student project demonstration and do not represent verified commercial claims.</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 8. TESTIMONIALS ==================== -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        
+        <div class="section-intro text-center fade-in-up">
+          <span class="section-tag">Student Experiences</span>
+          <!-- Required Heading -->
+          <h2 class="section-title">What Students Say</h2>
+          <p class="section-subtitle">
+            Fictional student profiles demonstrating typical use cases and benefits of StudyFlow AI across disciplines.
+          </p>
+        </div>
+
+        <!-- 3 Fictional Testimonials (Exact required names & details) -->
+        <div class="testimonials-grid">
+          
+          <!-- Testimonial 1: Aarav (Exact required quote & name) -->
+          <div class="testimonial-card fade-in-up">
+            <div class="card-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="quote-text">
+              "StudyFlow helped me organize my entire exam preparation into a simple daily plan. I went from feeling completely overwhelmed to feeling calm and confident."
+            </blockquote>
+            <div class="author-row">
+              <img src="assets/student-aarav.svg" alt="Aarav's avatar" class="author-avatar" width="46" height="46">
+              <div class="author-meta">
+                <!-- Exact required name & description -->
+                <strong class="author-name">Aarav</strong>
+                <span class="author-role">College Student • Computer Science</span>
+                <span class="fictional-tag">Fictional Demo Persona</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2: Sophia -->
+          <div class="testimonial-card fade-in-up delay-1">
+            <div class="card-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="quote-text">
+              "The AI Summarizer cuts my dense medical reading time in half without missing crucial physiological details. Generating instant practice quizzes has revolutionized my active recall."
+            </blockquote>
+            <div class="author-row">
+              <img src="assets/student-sophia.svg" alt="Sophia's avatar" class="author-avatar" width="46" height="46">
+              <div class="author-meta">
+                <strong class="author-name">Sophia</strong>
+                <span class="author-role">Pre-Med Student • Biology</span>
+                <span class="fictional-tag">Fictional Demo Persona</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3: Marcus -->
+          <div class="testimonial-card fade-in-up delay-2">
+            <div class="card-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="quote-text">
+              "Focus Mode with the ambient timer stopped me from doomscrolling social media during homework. My study productivity practically doubled within my first week of using it."
+            </blockquote>
+            <div class="author-row">
+              <img src="assets/student-marcus.svg" alt="Marcus's avatar" class="author-avatar" width="46" height="46">
+              <div class="author-meta">
+                <strong class="author-name">Marcus</strong>
+                <span class="author-role">High School Senior • AP History</span>
+                <span class="fictional-tag">Fictional Demo Persona</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="testimonials-disclaimer text-center">
+          <em>*All student reviews and personas displayed are fictional concepts created to illustrate platform usability.</em>
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ==================== 9. PRICING SECTION ==================== -->
+    <section class="pricing-section" id="pricing">
+      <div class="container">
+        
+        <div class="section-intro text-center fade-in-up">
+          <span class="section-tag">Sample Plans</span>
+          <h2 class="section-title">Transparent Student Pricing</h2>
+          <p class="section-subtitle">
+            Sample demonstration pricing structures showing how StudyFlow AI tiers its feature offerings.
+          </p>
+          
+          <!-- Billing Cycle Toggle (Monthly / Annual) -->
+          <div class="billing-toggle-wrap">
+            <span class="billing-label" id="monthlyLabel">Monthly</span>
+            <button class="toggle-switch" id="billingToggle" aria-label="Toggle annual or monthly pricing" role="switch" aria-checked="false">
+              <span class="toggle-knob"></span>
+            </button>
+            <span class="billing-label" id="annualLabel">
+              Annually <span class="discount-badge">Save 25%</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- 3 Pricing Cards (FREE, PRO, PREMIUM) -->
+        <div class="pricing-grid">
+          
+          <!-- Tier 1: FREE -->
+          <div class="pricing-card fade-in-up">
+            <div class="card-tier-header">
+              <h3 class="tier-name">FREE</h3>
+              <p class="tier-desc">Essential tools for students getting started.</p>
+              <div class="tier-price">
+                <span class="price-currency">$</span>
+                <span class="price-val">0</span>
+                <span class="price-period">/ month</span>
+              </div>
+            </div>
+
+            <!-- Exact required features -->
+            <ul class="tier-features-list">
+              <li class="feature-item included">
+                <span class="check-icon">✓</span>
+                <span>Basic study planner</span>
+              </li>
+              <li class="feature-item included">
+                <span class="check-icon">✓</span>
+                <span>Limited AI summaries</span>
+              </li>
+              <li class="feature-item included">
+                <span class="check-icon">✓</span>
+                <span>Basic progress tracking</span>
+              </li>
+              <li class="feature-item excluded">
+                <span class="cross-icon">✕</span>
+                <span>AI quiz generator</span>
+              </li>
+              <li class="feature-item excluded">
+                <span class="cross-icon">✕</span>
+                <span>Advanced focus mode</span>
+              </li>
+            </ul>
+
+            <div class="pricing-card-footer">
+              <button class="btn btn-outline btn-block select-plan-btn" data-plan="Free">Get Started Free</button>
+            </div>
+          </div>
+
+          <!-- Tier 2: PRO (Featured) -->
+          <div class="pricing-card featured-card fade-in-up delay-1">
+            <div class="popular-ribbon">Most Popular</div>
+            <div class="card-tier-header">
+              <h3 class="tier-name">PRO</h3>
+              <p class="tier-desc">Comprehensive toolkit for high-achieving learners.</p>
+              <div class="tier-price">
+                <span class="price-currency">$</span>
+                <span class="price-val" data-monthly="8" data-annual="6">8</span>
+                <span class="price-period">/ month</span>
+              </div>
+              <span class="billed-note" id="proBilledNote">Billed monthly</span>
+            </div>
+
+            <!-- Exact required features -->
+            <ul class="tier-features-list">
+              <li class="feature-item included">
+                <span class="check-icon">✓</span>
+                <span>Unlimited AI summaries</span>
+              </li>
+              <li class="feature-item included">
+                <span class="check-icon">✓</span>
+                <span>AI quiz generator</span>
+              </li>
+              <li class="feature-item included">
+                <span class="check-icon">✓</span>
+                <span>Advanced planning</span>
+              </li>
+              <li class="feature-item included">
+                <span class="check-icon">✓</span>
+                <span>Focus mode with ambient audio</span>
+              </li>
+              <li class="feature-item included">
+                <span class="check-icon">✓</span>
+                <span>Sync with Google Calendar</span>
+              </li>
+            </ul>
+
+            <div class="pricing-card-footer">
+              <button class="btn btn-primary btn-block select-plan-btn" data-plan="Pro">Start Pro Demo</button>
+            </div>
+          </div>
+
+          <!-- Tier 3: PREMIUM -->
+          <div class="pricing-card fade-in-up delay-2">
+            <div class="card-tier-header">
+              <h3 class="tier-name">PREMIUM</h3>
+              <p class="tier-desc">Ultimate power for medical, law & grad scholars.</p>
+              <div class="tier-price">
+                <span class="price-currency">$</span>
+                <span class="price-val" data-monthly="16" data-annual="12">16</span>
+                <span class="price-period">/ month</span>
+              </div>
+              <span class="billed-note" id="premBilledNote">Billed monthly</span>
+            </div>
+
+            <!-- Exact required features -->
+            <ul class="tier-features-list">
+              <li class="feature-item included">
+                <span class="check-icon">✓</span>
+                <span>Everything in Pro</span>
+              </li>
+              <li class="feature-item included">
+                <span class="check-icon">✓</span>
+                <span>Advanced personalization</span>
+              </li>
+              <li class="feature-item included">
+                <span class="check-icon">✓</span>
+                <span>Priority features</span>
+              </li>
+              <li class="feature-item included">
+                <span class="check-icon">✓</span>
+                <span>Extended AI tools</span>
+              </li>
+              <li class="feature-item included">
+                <span class="check-icon">✓</span>
+                <span>Personal academic coaching</span>
+              </li>
+            </ul>
+
+            <div class="pricing-card-footer">
+              <button class="btn btn-outline btn-block select-plan-btn" data-plan="Premium">Start Premium Demo</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Demonstration Notice for Pricing -->
+        <p class="pricing-disclaimer text-center">
+          <strong>Demonstration Pricing:</strong> These pricing tiers represent sample concept models for evaluation. No real payment or credit card is processed.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ==================== 10. FAQ SECTION ==================== -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        
+        <div class="section-intro text-center fade-in-up">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            Find answers to common questions about StudyFlow AI's architecture, usage, and student benefits.
+          </p>
+        </div>
+
+        <!-- Expandable FAQ Items (Exact required questions) -->
+        <div class="faq-accordion-wrapper fade-in-up">
+          
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqBtn1" aria-controls="faqAns1">
+              <span class="question-text">What is StudyFlow AI?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer-panel" id="faqAns1" role="region" aria-labelledby="faqBtn1">
+              <div class="faq-answer-content">
+                <p>
+                  StudyFlow AI is an all-in-one student productivity and learning platform that leverages artificial intelligence to streamline academic workflows. It unifies intelligent study schedule generation, instant note summarization, active recall quizzes, and distraction-free study sessions into a seamless web experience.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqBtn2" aria-controls="faqAns2">
+              <span class="question-text">How does the AI study planner work?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer-panel" id="faqAns2" role="region" aria-labelledby="faqBtn2">
+              <div class="faq-answer-content">
+                <p>
+                  You simply enter your syllabus topics, test dates, and daily available study hours. StudyFlow AI analyzes the difficulty and volume of each topic, applies spaced repetition principles, and automatically constructs a balanced daily study calendar with dedicated review windows.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqBtn3" aria-controls="faqAns3">
+              <span class="question-text">Can I use StudyFlow AI on mobile?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer-panel" id="faqAns3" role="region" aria-labelledby="faqBtn3">
+              <div class="faq-answer-content">
+                <p>
+                  Yes, absolutely! StudyFlow AI is engineered with a mobile-first, fully responsive design. You can review your daily schedule, practice quizzes, and read summaries seamlessly on your smartphone, tablet, laptop, or desktop without downloading an app.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqBtn4" aria-controls="faqAns4">
+              <span class="question-text">Is StudyFlow AI free?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer-panel" id="faqAns4" role="region" aria-labelledby="faqBtn4">
+              <div class="faq-answer-content">
+                <p>
+                  Yes! StudyFlow AI provides a robust Free tier that includes core study planning, basic progress tracking, and introductory AI summaries. For power users seeking unlimited AI tools and advanced quiz generation, optional Pro and Premium tiers are available in our prototype demonstration.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqBtn5" aria-controls="faqAns5">
+              <span class="question-text">Can I generate quizzes from my notes?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer-panel" id="faqAns5" role="region" aria-labelledby="faqBtn5">
+              <div class="faq-answer-content">
+                <p>
+                  Yes! You can paste any text from lecture transcripts, textbook passages, or lecture slides into the AI Quiz Generator. The system extracts core definitions, key facts, and conceptual relationships to generate multiple-choice questions and interactive flashcards.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqBtn6" aria-controls="faqAns6">
+              <span class="question-text">Do I need technical knowledge to use it?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer-panel" id="faqAns6" role="region" aria-labelledby="faqBtn6">
+              <div class="faq-answer-content">
+                <p>
+                  Not at all! StudyFlow AI is built with an intuitive, clean interface. If you can type or copy-paste text, you can use every single feature on the platform right out of the box with zero technical background required.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 11. CONTACT SECTION ==================== -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        
+        <div class="contact-card-wrapper fade-in-up">
+          <div class="contact-info-col">
+            <span class="section-tag">Get in Touch</span>
+            <!-- Required Heading -->
+            <h2 class="contact-title">Ready to Study Smarter?</h2>
+            <!-- Required Supporting text -->
+            <p class="contact-subtitle">
+              Start building a better study routine with AI-powered productivity tools. Have feedback or want to partner on educational research? Send us a message!
+            </p>
+
+            <div class="contact-perks">
+              <div class="perk-row">
+                <span class="perk-icon">🌿</span>
+                <div>
+                  <strong>Simple, Calm Setup</strong>
+                  <p>Start organizing your study materials immediately.</p>
+                </div>
+              </div>
+              <div class="perk-row">
+                <span class="perk-icon">🔒</span>
+                <div>
+                  <strong>Student Privacy First</strong>
+                  <p>Your notes and study schedules are kept strictly private.</p>
+                </div>
+              </div>
+              <div class="perk-row">
+                <span class="perk-icon">🎓</span>
+                <div>
+                  <strong>Academic Project Showcase</strong>
+                  <p>Crafted by Somil Jain for web engineering evaluation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form (Exact required inputs: Name, Email, Message, Send Message button) -->
+          <div class="contact-form-col">
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="contactName" class="form-label">Full Name <span class="req">*</span></label>
+                <input type="text" id="contactName" name="name" class="form-input" placeholder="e.g. Alex Rivera" required>
+                <span class="form-error-msg" id="nameError">Please enter your name</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail" class="form-label">Email Address <span class="req">*</span></label>
+                <input type="email" id="contactEmail" name="email" class="form-input" placeholder="e.g. alex@university.edu" required>
+                <span class="form-error-msg" id="emailError">Please enter a valid email address</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label">Message <span class="req">*</span></label>
+                <textarea id="contactMessage" name="message" class="form-input form-textarea" rows="4" placeholder="Tell us about your study goals or questions..." required></textarea>
+                <span class="form-error-msg" id="messageError">Please enter a message</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="contactSubmitBtn">
+                <span>Send Message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <!-- Required Demonstration Notice -->
+              <p class="demo-form-notice">
+                ℹ️ <strong>Demonstration Notice:</strong> This is a demonstration website created for an internship assignment. Form submissions are simulated locally and no data is sent to external servers.
+              </p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== 12. FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Brand & Tagline Col -->
+        <div class="footer-brand-col">
+          <a href="#home" class="brand-logo" aria-label="StudyFlow AI Home">
+            <img src="assets/logo.svg" alt="StudyFlow AI Logo" class="brand-img" width="30" height="30">
+            <!-- Exact required name -->
+            <span class="brand-text">StudyFlow<span class="brand-dot-ai">.ai</span></span>
+          </a>
+          <!-- Exact required tagline -->
+          <p class="footer-tagline">"Study smarter. Learn faster. Achieve more."</p>
+          <p class="footer-desc">
+            Empowering students with thoughtful artificial intelligence for smarter scheduling, automated note condensation, and active recall mastery.
+          </p>
+
+          <!-- Social media placeholders (Exact required item) -->
+          <div class="social-links" aria-label="Social Media Links">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter / X">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation Links (Exact required item) -->
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#ai-tools">AI Tools</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- AI Capabilities Col -->
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">AI Modules</h4>
+          <ul class="footer-links">
+            <li><a href="#ai-tools">Study Planner</a></li>
+            <li><a href="#ai-tools">Notes Summarizer</a></li>
+            <li><a href="#ai-tools">Quiz Generator</a></li>
+            <li><a href="#features">Focus Mode</a></li>
+            <li><a href="#features">Progress Analytics</a></li>
+            <li><a href="#features">Personalized Insights</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal & Contact Col (Exact required items: Privacy Policy, Terms, Contact) -->
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Legal & Contact</h4>
+          <ul class="footer-links">
+            <li><a href="#contact">Contact Support</a></li>
+            <li><button class="footer-modal-link" data-modal="privacyModal">Privacy Policy</button></li>
+            <li><button class="footer-modal-link" data-modal="termsModal">Terms of Service</button></li>
+            <li><button class="footer-modal-link" data-modal="demoModal">Demonstration Policy</button></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar (Exact required item: "Website created by Somil Jain") -->
+      <div class="footer-bottom">
+        <div class="footer-credit">
+          <p>
+            &copy; 2026 StudyFlow AI. All rights reserved. 
+            <span class="credit-highlight">Website created by Somil Jain</span>
+          </p>
+        </div>
+        <div class="footer-note">
+          <small>Designed for Academic Evaluation & Internship Task 3.</small>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== INTERACTIVE MODALS ==================== -->
+  
+  <!-- Info / Feature / Legal Modal -->
+  <div class="modal-backdrop" id="genericModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Feature Details</h3>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <p>Modal content</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="modalActionBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Script File -->
+  <script src="script.js"></script>
+</body>
+</html>

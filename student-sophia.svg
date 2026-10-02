@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <rect width="80" height="80" rx="40" fill="#FBF4EB"/>
+  <!-- Head -->
+  <circle cx="40" cy="33" r="15" fill="#FED7AA"/>
+  <!-- Hair Long -->
+  <path d="M24 35C24 20 30 15 40 15C50 15 56 20 56 35C56 46 54 55 53 58C52 52 50 35 40 32C30 35 28 52 27 58C26 55 24 46 24 35Z" fill="#3D3835"/>
+  <!-- Eyes -->
+  <circle cx="35" cy="33" r="2" fill="#20242A"/>
+  <circle cx="45" cy="33" r="2" fill="#20242A"/>
+  <!-- Smile -->
+  <path d="M36 41C38 43.5 42 43.5 44 41" stroke="#9A3412" stroke-width="2" stroke-linecap="round"/>
+  <!-- Torso / Warm Sage Scrubs/Coat -->
+  <path d="M19 72C19 57 28 51 40 51C52 51 61 57 61 72H19Z" fill="#7A9E7E"/>
+  <!-- Collar hint -->
+  <path d="M35 51L40 60L45 51" fill="#FFFFFF"/>
+</svg>

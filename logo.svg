@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Clean, Flat Academic Logo: Forest Green & Warm Amber -->
+  <rect width="48" height="48" rx="10" fill="#E8F0E8" />
+  <rect x="1" y="1" width="46" height="46" rx="9" stroke="#7A9E7E" stroke-width="1.5" stroke-opacity="0.4" />
+  <!-- Academic Cap / Open Book Shape -->
+  <path d="M12 20.5L24 14L36 20.5L24 27L12 20.5Z" fill="#4F6F52" />
+  <path d="M17.5 24V29.5C17.5 32.5 24 34.5 24 34.5C24 34.5 30.5 32.5 30.5 29.5V24" stroke="#4F6F52" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Warm Amber Sparkle Accent (Learning & Ideas) -->
+  <path d="M34 11L34.8 13.2L37 14L34.8 14.8L34 17L33.2 14.8L31 14L33.2 13.2L34 11Z" fill="#D99A5B" />
+  <circle cx="14" cy="14" r="1.5" fill="#7A9E7E" />
+</svg>
